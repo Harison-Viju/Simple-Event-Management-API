@@ -1,0 +1,17 @@
+
+---
+
+### 🔁 **Postman Collection (structure)**
+
+You can manually create or I can provide the JSON. Here's the endpoint structure to create in Postman:
+
+**Collection: Event API**
+
+1. **POST** `http://localhost:3000/api/events`  
+   Body (JSON):
+   ```json
+   {
+     "title": "Meeting",
+     "description": "Project kickoff",
+     "date": "2025-05-04"
+   }
