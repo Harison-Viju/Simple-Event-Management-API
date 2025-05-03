@@ -97,3 +97,23 @@ MONGODB_URI=mongodb://localhost:27017/event_db
 
 
 ### Postman Documentation file:event-management-api.postman_collection.json
+
+
+## 📸 Screenshots
+
+### 1. Creating an Event in Postman
+![Create Event](./Ouput%20Screenshots/create_event.png)
+
+### 2. Getting All Events in Postman
+![Get All Events](./Ouput%20Screenshots/get_all_events.png)
+
+
+### 3. Getting  Events by ID in Postman
+![Get Events by ID](./Ouput%20Screenshots/get_event_bys_id.png)
+
+### 4. Update an Event in Postman
+![Update an Event](./Ouput%20Screenshots/update_event.png)
+
+### 5. Delete an Event in Postman
+![Delete an Event](./Ouput%20Screenshots/delete_event.png)
+
