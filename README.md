@@ -1,52 +1,99 @@
 # Simple Event Management API
+- This is a RESTful API built with **Node.js**, **Express**, **TypeScript**, and **MongoDB**.
+- Allows users to create, view, update, and delete events.
+- Features **date validation** and provides **JSON responses**.
+- Does not require authentication.
 
-This is a TypeScript-based REST API for managing events with basic CRUD operations using Express and MongoDB.
+---
 
-## Features
+## 📦 Features
 
-- Create an event (title, description, date)
-- List all events
-- Get a specific event by ID
-- Update an event by ID
-- Delete an event by ID
+- `POST /api/events` – Create an event (title, description, date).
+- `GET /api/events` – List all events.
+- `GET /api/events/:id` – Get a specific event.
+- `PUT /api/events/:id` – Update an event.
+- `DELETE /api/events/:id` – Delete an event.
 
-## Tech Stack
+---
 
-- Node.js
-- TypeScript
-- Express
-- MongoDB (Mongoose)
-- Dotenv, CORS
+## ⚙️ Tech Stack
 
-## Getting Started
+- **Node.js**
+- **Express**
+- **TypeScript**
+- **MongoDB** with Mongoose.
+- **ts-node-dev** for development.
 
-### Prerequisites
+---
 
-- Node.js
-- MongoDB (running locally or in the cloud)
+## 🛠️ Getting Started
 
-### Installation
+- **Clone the Repository**:
+    ```bash
+    git clone https://github.com/Harison-Viju/Simple-Event-Management-API.git
+    cd Simple-Event-Management-API
+    ```
 
+- **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+
+- **MongoDB Setup**:
+    - **Option A**: Using MongoDB Locally:
+        - Download and install MongoDB.
+        - Run MongoDB locally with the default port `27017`.
+        - Ensure the URI in `.env` is:
+            ```bash
+            MONGODB_URI=mongodb://localhost:27017/event_db
+            ```
+    - **Option B**: Using MongoDB Atlas (Cloud):
+        - Create a free cluster at [MongoDB Atlas](https://cloud.mongodb.com).
+        - Create a database and get your connection string.
+        - Replace the URI in `.env` like:
+            ```bash
+            MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/event_db?retryWrites=true&w=majority
+            ```
+
+- **Run the Server**:
+    - For development:
+        ```bash
+        npm run dev
+        ```
+
+- **API Testing with Postman**:
+    1. Download [Postman](https://www.postman.com/downloads/).
+    2. Import the API collection file (manually or via raw JSON) to test endpoints:
+         - Create Event.
+         - Get All Events.
+         - Get Event By ID.
+         - Update Event.
+         - Delete Event.
+### 3. Example POST Body
 ```bash
-git clone <repo-url>
-cd event-management-api
-npm install
+POST http://localhost:3000/api/events
+Content-Type: application/json
 
-## Setup
-1. Clone repository
-2. Install dependencies: `npm install`
-3. Start MongoDB server
-4. Create `.env` file with environment variables
-5. Start dev server: `npm run dev`
+{
+  "title": "Demo Event",
+  "description": "This is a test event",
+  "date": "2025-05-05T10:00:00Z"
+}
+```
+🧾 Environment Variables
+Create a .env file in the root directory:
+```bash 
+PORT=3000
+MONGODB_URI=mongodb://localhost:27017/event_db
+```
+✅ Requirements
+ - Node.js (v16 or above)
 
-## API Endpoints
-- POST /api/events - Create event
-- GET /api/events - List all events
-- GET /api/events/:id - Get specific event
-- PUT /api/events/:id - Update event
-- DELETE /api/events/:id - Delete event
+ - npm
+
+ - MongoDB (local or cloud)
+
+ - Postman (for testing)
 
 
-npm run dev   # for development (with nodemon)
-npm run build # to build TypeScript
-npm start     # to run built app
+### Postman Documentation file:event-management-api.postman_collection.json
